@@ -87,11 +87,11 @@ def get_nutritions(food_name):
                 vitamins = float(vitamin_a) + float(vitamin_c)
                 data_to_concat.append({
                     'name': name,
-                    'protein': protein or np.nan,
-                    'calcium': calcium / 1000 if calcium else np.nan,
-                    'fat': fat or np.nan,
-                    'carbohydrates': carbs or np.nan,
-                    'vitamins': vitamins / 1000 if vitamins else np.nan
+                    'protein': protein or 'nan',
+                    'calcium': calcium / 1000 if calcium else 'nan',
+                    'fat': fat or 'nan',
+                    'carbohydrates': carbs or 'nan',
+                    'vitamins': vitamins / 1000 if vitamins else 'nan'
                 })
 
                 nutrition_data = pd.concat([nutrition_data, pd.DataFrame(data_to_concat)], ignore_index=True)
@@ -100,4 +100,4 @@ def get_nutritions(food_name):
         except KeyError:
             print(f"Sorry {name}, not in database. But it's propably not healthy. I suggest green salad instead. :)")
 
-    return nutrition_data
+    return nutrition_data.to_dict()
