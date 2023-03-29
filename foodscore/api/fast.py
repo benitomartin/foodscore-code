@@ -20,6 +20,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+model = load_model()
 
 @app.get("/")
 def index():
@@ -38,7 +39,8 @@ async def receive_image(img: UploadFile=File(...)):
     converted_image = convert_test_image(cv2_img)
 
     ##predicts label
-    predicted_label = predict_label(load_model(), converted_image)
+    predicted_label = predict_label(model, converted_image)
+
 
     ##get nutrition
     nutritions = get_nutritions(predicted_label)
