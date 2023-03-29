@@ -11,6 +11,7 @@ from tensorflow.keras.regularizers import l2
 import numpy as np
 import pandas as pd
 from foodscore import params
+import os
 
 
 
@@ -110,7 +111,7 @@ def fit_model(model, train_ds, val_ds):
 
 ## load saved model
 
-def load_model(path = params.MODEL_PATH):
+def load_model(path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),params.MODEL_PATH)):
     saved_model = models.load_model(path)
     return saved_model
 
@@ -119,7 +120,7 @@ def load_model(path = params.MODEL_PATH):
 def predict_label(saved_model, image, most_prob=5):
     pred = saved_model.predict(image)
     food_list = []
-    with open('../../raw_data/UECFOOD100/category.txt', 'r') as f:
+    with open(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),'raw_data/UECFOOD100/category.txt'), 'r') as f:
         next(f)
         for line in f:
             line = line.strip().split('\t')
@@ -127,5 +128,4 @@ def predict_label(saved_model, image, most_prob=5):
     data = list(zip(food_list, pred[0]))
     sorted_data = sorted(data, key=lambda x: x[1], reverse=True)
     result = [x[0] for x in sorted_data[:most_prob]]
-    print(result)
     return result
