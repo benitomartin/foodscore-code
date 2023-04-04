@@ -71,5 +71,6 @@ First, you need to clone the repository and install the requirements by running 
 - Create an additional directory `raw_data/UECFOOD100/` and save there the Food100 dataset
 - Create an additional directory `raw_data/model` where the model will be saved
 - Run modelcreation.py to train the model and get the weights. These will be saved in the `raw_data/model`
-
+- Save the weights in the Website [repository](https://github.com/benitomartin/foodscore-app)
+- In the Website repository, under app.py
 
