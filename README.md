@@ -60,6 +60,6 @@ For deployment, the following steps were followed:
 
 ## :clapper: **The Website**
 
-The Website was created using streamlit and for that, an additional [repository](https://github.com/benitomartin/foodscore-app) was created. Instruction on how to use the Website can be found in that repository
+The Website was created using streamlit and for that, an additional [repository](https://github.com/benitomartin/foodscore-app) was created. Instruction on how to use the Website can be found in that repository.
 
 ![Screenshot App](https://user-images.githubusercontent.com/116911431/229893707-e95bf9ff-0d50-4d12-a6b9-cdb88ffc54e6.png)
