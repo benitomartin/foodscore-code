@@ -22,3 +22,16 @@ Worldwide overweight in the adult population has increased from 39% to 45% in th
 For this project the Dataset [Food100](http://foodcam.mobi/dataset100.html) from the Food Recognition Research Group (University of Electro-Communications, Tokyo, Japan) was used. This Dataset contains a mixture of western and japanese food, 100 different classes and around 12740 photos including 1174 multiple-food photos.
 
 ![My Remote Image](https://user-images.githubusercontent.com/116911431/229874089-2a3d3f32-a45f-453d-8eb1-a6270e4c64a6.jpg)
+
+Additionally the nutrition facts where extracted from the database [FoodData Central](https://fdc.nal.usda.gov/index.html)
+ of the U.S. Department of Agriculture.
+ 
+## :atom: **The Model**
+
+### :one: **Data Preparation**
+
+The dataset is well organized and it can be easily splited into train, validation and test set.
+
+### 2️⃣: **Data Preparation**
+
+The dataset is well organized and it can be easily splited into train, validation and test set.
