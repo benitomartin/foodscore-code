@@ -19,19 +19,42 @@ Worldwide overweight in the adult population has increased from 39% to 45% in th
 
 ## :rice: **The Data**
 
-For this project the Dataset [Food100](http://foodcam.mobi/dataset100.html) from the Food Recognition Research Group (University of Electro-Communications, Tokyo, Japan) was used. This Dataset contains a mixture of western and japanese food, 100 different classes and around 12740 photos including 1174 multiple-food photos.
+For this project, the Dataset [Food100](http://foodcam.mobi/dataset100.html) from the Food Recognition Research Group (University of Electro-Communications, Tokyo, Japan) was used. This Dataset contains a mixture of Western and Japanese food, 100 different classes and around 12740 photos, including 1174 multiple-food photos.
 
 ![My Remote Image](https://user-images.githubusercontent.com/116911431/229874089-2a3d3f32-a45f-453d-8eb1-a6270e4c64a6.jpg)
 
-Additionally the nutrition facts where extracted from the database [FoodData Central](https://fdc.nal.usda.gov/index.html)
+Additionally, the nutrition facts were extracted from the database [FoodData Central](https://fdc.nal.usda.gov/index.html)
  of the U.S. Department of Agriculture.
  
 ## :atom: **The Model**
 
 ### :one: **Data Preparation**
 
-The dataset is well organized and it can be easily splited into train, validation and test set.
+The dataset is well organized, and it can be easily split into train, validation and test set using `image_dataset_from_directory`.
 
-### 2️⃣: **Data Preparation**
+### :two: **Data Augmentation**
 
-The dataset is well organized and it can be easily splited into train, validation and test set.
+Due to some unbalanced classes, data augmentation was implemented. The following layers from Tensorflow Keras were used:
+- `RandomFlip`
+- `RandomRotation`
+- `RandomBrightness`
+- `RandomContrast`
+- `RandomZoom`
+
+Additionally, a layer called `RandomBlurHue` was created to adjust the color hue of RGB images by a random factor and perform Gaussian blur on the images.
+
+### :three: **Data Training and Evaluation**
+
+Transfer learning using `ResNet152`was implemented. This model has convolutional weights that are trained on ImageNet data, and compared to the other Keras Models, it was the model with the best performance.
+
+
+### :four: **Deployment **
+
+For deployment, the following steps were followed:
+
+👉 create a prediction API using FastAPI
+
+👉 create a Docker image containing the environment required to run the code of our API
+
+👉 push this image to Google Cloud Run so that it runs inside a Docker container that allow people all over the world to use it
+
