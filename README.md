@@ -60,6 +60,16 @@ For deployment, the following steps were followed:
 
 ## :clapper: **The Website**
 
-The Website was created using streamlit and for that, an additional [repository](https://github.com/benitomartin/foodscore-app) was created. Instruction on how to use the Website can be found in that repository.
+The Website was created using streamlit and for that, an additional [repository](https://github.com/benitomartin/foodscore-app) was created. Instructions on how to use the Website can be found in that repository.
 
 ![Screenshot App](https://user-images.githubusercontent.com/116911431/229893707-e95bf9ff-0d50-4d12-a6b9-cdb88ffc54e6.png)
+
+## :thinking: **How to use this repository** 
+
+First, you need to clone the repository and install the requirements by running `pip install -r requirements.txt`. This allows to install all required packages. Then follow these steps:
+
+- Create an additional directory `raw_data/UECFOOD100/` and save there the Food100 dataset
+- Create an additional directory `raw_data/model` where the model will be saved
+- Run modelcreation.py to train the model and get the weights. These will be saved in the `raw_data/model`
+
+
