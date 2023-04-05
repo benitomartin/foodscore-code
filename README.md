@@ -72,7 +72,11 @@ As a business solution a Website was created using Streamlit. For that, an addit
 
 ## **Conclusion** :end:
 
+After training a deep learning model for food recognition, we can conclude that the model is capable of accurately identifying different types of food items based on their visual features. The model has been trained on a large dataset of food images, and through the use of advanced techniques, it has learned to recognize the unique features of different food categories.
 
+However, as with any machine learning model, there is always room for improvement. The accuracy of the model can be further improved by fine-tuning the hyperparameters, increasing the size of the training dataset, and incorporating additional data augmentation techniques.
+
+In conclusion, the deep learning model for food recognition has shown great promise in accurately identifying different food items and has the potential to be applied in various real-world scenarios. Further research and development can help to improve the accuracy and robustness of the model, making it even more useful in the future.
 
 ## :thinking: **How to use this repository** 
 
