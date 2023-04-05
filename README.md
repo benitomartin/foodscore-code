@@ -78,7 +78,7 @@ However, as with any machine learning model, there is always room for improvemen
 
 In conclusion, the deep learning model for food recognition has shown great promise in accurately identifying different food items and has the potential to be applied in various real-world scenarios. Further research and development can help to improve the accuracy and robustness of the model, making it even more useful in the future.
 
-## :thinking: **How to use this repository** 
+## :question: **How to use this repository** 
 
 First, you need to clone the repository and install the requirements by running `pip install -r requirements.txt`. This allows the installation of all required packages. Then follow these steps:
 
