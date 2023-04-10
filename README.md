@@ -1,5 +1,13 @@
 # **THE BUSINESS MODEL** :business_suit_levitating:
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/116911431/230980393-4bccdf60-5dac-4b1f-9899-c93da920bcdc.png" width="600"/>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/116911431/230978530-7cf19133-b3bb-477c-952f-d0fc2f58f828.gif" width="200"/>
+</p>
+
 ## :pushpin: **Pain Points**
 
 In recent years, food recognition using deep learning models has become an active research area. 
