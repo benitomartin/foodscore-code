@@ -50,7 +50,6 @@ class RandomBlurHue(tf.keras.layers.Layer):
         return outputs
 
 ## Create the model
-
 def create_model(input_shape = params.INPUT_SHAPE):
 
     inputs = layers.Input(input_shape)
