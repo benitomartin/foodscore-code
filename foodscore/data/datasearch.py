@@ -6,6 +6,7 @@ from foodscore import params
 import cv2
 import requests
 
+# Get Data
 def get_data(path = params.LOCAL_PATH, validation_split = 0.2, img_height = params.IMG_HEIGHT, img_width = params.IMG_WIDTH, bs = params.BATCH_SIZE):
 
     train_ds = image_dataset_from_directory(
@@ -39,6 +40,7 @@ def get_data(path = params.LOCAL_PATH, validation_split = 0.2, img_height = para
 
     return train_ds, val_ds, test_ds
 
+# Convert Image
 def convert_test_image(img, img_height = params.IMG_HEIGHT, img_width = params.IMG_WIDTH):
     dims = (img_height, img_width)
     # img = cv2.imread(img)
@@ -48,6 +50,7 @@ def convert_test_image(img, img_height = params.IMG_HEIGHT, img_width = params.I
     img = tf.expand_dims(img, axis=0)
     return img
 
+# Get Nutrients
 def get_nutritions(food_name):
     nutrition_data = pd.DataFrame(columns=['name', 'protein', 'calcium', 'fat', 'carbohydrates', 'vitamins'])
     carbs = 0
