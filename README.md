@@ -8,7 +8,7 @@
   <img src="https://user-images.githubusercontent.com/116911431/230978530-7cf19133-b3bb-477c-952f-d0fc2f58f828.gif" width="200"/>
 </p>
 
-## Tech Stack
+## :hotsprings: **Tech Stack**
 
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
